@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Weather from "components/Weather/Weather";
+import Forecast from "components/Forecast/Forecast";
+import { getCurrentPosition } from "utils/getCurrentPosition";
 
-function App() {
+const App = () => {
+  const [position, setPosition] = useState({ lat: 0, lon: 0 });
+
+  useEffect(() => {
+    (async () => {
+      const { latitude, longitude } = await getCurrentPosition();
+      setPosition({ lat: latitude, lon: longitude });
+    })();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {(position.lat > 0 || position.lon > 0) && (
+        <>
+          <Weather position={position} />
+          <Forecast position={position} />
+        </>
+      )}
+    </>
   );
-}
+};
 
 export default App;
