@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
 import axios from "axios";
-import useFetch from "./useFetch";
+import { useFetch } from "./useFetch";
 
 jest.mock("axios");
 

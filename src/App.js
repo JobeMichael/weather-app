@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Weather from "components/Weather/Weather";
 import Forecast from "components/Forecast/Forecast";
+import Layout from "components/Layout/Layout";
 import { getCurrentPosition } from "utils/getCurrentPosition";
 
 const App = () => {
@@ -14,14 +15,14 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <Layout>
       {(position.lat > 0 || position.lon > 0) && (
         <>
           <Weather position={position} />
           <Forecast position={position} />
         </>
       )}
-    </>
+    </Layout>
   );
 };
 
