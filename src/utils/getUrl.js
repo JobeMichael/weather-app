@@ -6,6 +6,6 @@ export const getUrl = (type, options) => {
     .map((key) => key + "=" + options[key])
     .join("&");
 
-  const url = `${apiDomain}/${type}/?appid=${apiKey}&${queryParams}`;
+  const url = `${apiDomain}/${type}/?appid=${apiKey}&units=metric&${queryParams}`;
   return url;
 };
