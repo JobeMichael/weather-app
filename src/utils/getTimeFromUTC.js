@@ -1,2 +1,4 @@
-export const getTimeFromUTC = (utc) =>
-  new Date(utc * 1000).toLocaleTimeString().slice(0, 5);
+import moment from "moment";
+export const getTimeFromUTC = (utc) => {
+  return moment.unix(utc).format("HH:mm");
+};

@@ -15,8 +15,6 @@ const Forecast = ({ position }) => {
 
   const formattedData = useCallback(() => {
     if (data) {
-      console.log(data);
-
       const lastDay = moment().add(3, "days");
       isRaining = data.list[0].weather[0].main === "Rain";
 
