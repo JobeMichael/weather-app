@@ -63,7 +63,7 @@ exports[`<Weather/> renders Weather correctly 1`] = `
         class="sc-AxhUy bDbuoR"
       >
         <h4>
-          Inval
+          Invalid date
         </h4>
         <span>
           Sunrise
@@ -93,7 +93,7 @@ exports[`<Weather/> renders Weather correctly 1`] = `
         class="sc-AxhUy bDbuoR"
       >
         <h4>
-          Inval
+          Invalid date
         </h4>
         <span>
           Sunset
@@ -104,18 +104,6 @@ exports[`<Weather/> renders Weather correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`<Weather/> should show Loader during async call 1`] = `
-<DocumentFragment>
-  <h3>
-    Loading
-  </h3>
-</DocumentFragment>
-`;
+exports[`<Weather/> should show Loader during async call 1`] = `<DocumentFragment />`;
 
-exports[`<Weather/> should show error message if there is a API error 1`] = `
-<DocumentFragment>
-  <h1>
-    Error...
-  </h1>
-</DocumentFragment>
-`;
+exports[`<Weather/> should show error message if there is a API error 1`] = `<DocumentFragment />`;

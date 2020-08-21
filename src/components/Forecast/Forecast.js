@@ -16,6 +16,7 @@ const Forecast = ({ position }) => {
   const formattedData = useCallback(() => {
     if (data) {
       const lastDay = moment().add(3, "days");
+      const today = moment(new Date());
       isRaining = data.list[0].weather[0].main === "Rain";
 
       return data.list.reduce((acc, item) => {
@@ -23,7 +24,7 @@ const Forecast = ({ position }) => {
         const currentDate = moment(date);
         const windSpeed = item.wind.speed;
 
-        if (currentDate.diff(lastDay, "days", true) < 0) {
+        if (currentDate.diff(lastDay) < 0 && !today.isSame(currentDate, "d")) {
           if (windSpeed > hightestWind.speed) {
             hightestWind.speed = windSpeed;
             hightestWind.date = date;
