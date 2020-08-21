@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Weather/> renders Weather correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm iIkEOg"
+  >
+    <div
+      class="sc-AxirZ jymRuQ"
+    >
+      <h2>
+        , 
+      </h2>
+      <h4>
+        Friday 21, August 2020
+      </h4>
+    </div>
+    <div
+      class="sc-AxhCb kurrzz"
+    >
+      <div>
+        <img
+          alt="weather-icon"
+          src="http://openweathermap.org/img/wn/04d@4x.png"
+        />
+      </div>
+      <div>
+        <h3>
+          22°
+        </h3>
+        <p>
+          Feels like 22°
+        </p>
+        <h4>
+          broken clouds
+        </h4>
+      </div>
+    </div>
+    <div
+      class="sc-AxiKw kjKCal"
+    >
+      <div
+        class="sc-AxhUy bDbuoR"
+      >
+        <h4>
+          23°
+        </h4>
+        <span>
+          Hight
+        </span>
+      </div>
+      <div
+        class="sc-AxhUy bDbuoR"
+      >
+        <h4>
+          3.12mph
+        </h4>
+        <span>
+          Wind
+        </span>
+      </div>
+      <div
+        class="sc-AxhUy bDbuoR"
+      >
+        <h4>
+          Inval
+        </h4>
+        <span>
+          Sunrise
+        </span>
+      </div>
+      <div
+        class="sc-AxhUy bDbuoR"
+      >
+        <h4>
+          22°
+        </h4>
+        <span>
+          Low
+        </span>
+      </div>
+      <div
+        class="sc-AxhUy bDbuoR"
+      >
+        <h4>
+          67%
+        </h4>
+        <span>
+          Humidity
+        </span>
+      </div>
+      <div
+        class="sc-AxhUy bDbuoR"
+      >
+        <h4>
+          Inval
+        </h4>
+        <span>
+          Sunset
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Weather/> should show Loader during async call 1`] = `
+<DocumentFragment>
+  <h3>
+    Loading
+  </h3>
+</DocumentFragment>
+`;
+
+exports[`<Weather/> should show error message if there is a API error 1`] = `
+<DocumentFragment>
+  <h1>
+    Error...
+  </h1>
+</DocumentFragment>
+`;

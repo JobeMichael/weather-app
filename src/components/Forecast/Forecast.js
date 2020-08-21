@@ -15,6 +15,8 @@ const Forecast = ({ position }) => {
 
   const formattedData = useCallback(() => {
     if (data) {
+      console.log(data);
+
       const lastDay = moment().add(3, "days");
       isRaining = data.list[0].weather[0].main === "Rain";
 
@@ -41,11 +43,12 @@ const Forecast = ({ position }) => {
     setForecast(formattedData());
   }, [data, formattedData]);
 
-  if (loading || !data) {
-    return <h1>Loading...</h1>;
-  }
   if (error) {
     return <h1>Error...</h1>;
+  }
+
+  if (loading || !data) {
+    return <h1>Loading...</h1>;
   }
 
   return (

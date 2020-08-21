@@ -11,11 +11,12 @@ const Weather = ({ position }) => {
   const weatherApiUrl = getUrl("weather", position);
   const { data, loading, error } = useFetch(weatherApiUrl);
 
-  if (loading || !data) {
-    return <></>;
-  }
   if (error) {
     return <h1>Error...</h1>;
+  }
+
+  if (loading || !data) {
+    return <h3>Loading</h3>;
   }
 
   const {
