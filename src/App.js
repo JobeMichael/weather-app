@@ -27,7 +27,12 @@ const App = ({ coords }) => {
           <Forecast position={position} />
         </>
       ) : (
-        <h1>💁 Turn On Location Services to Allow, if you haven't done yet!</h1>
+        <>
+          <h1>Wait for a second, let me process it...</h1>
+          <h3>
+            💁Turn On Location Services to Allow, if you haven't done yet!
+          </h3>
+        </>
       )}
     </Layout>
   );
