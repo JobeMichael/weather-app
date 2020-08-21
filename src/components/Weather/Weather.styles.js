@@ -4,10 +4,12 @@ export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 30px 0;
 `;
 
 export const Header = styled.div`
   flex-basis: 100%;
+  margin-bottom: 30px;
   h2 {
     color: rgb(255, 255, 255);
     display: block;
@@ -34,16 +36,21 @@ export const WeatherDetailsWrapper = styled.div`
   padding: 10px 0px;
   margin: 20px 0px;
   border-radius: 10px;
-  flex-basis: 50%;
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 `;
 
 export const Temperature = styled.div`
   display: flex;
   align-items: center;
   h3 {
-    font-size: 80px;
+    font-size: 70px;
   }
   h4 {
     font-size: 30px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;

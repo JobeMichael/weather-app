@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const WeatherDetail = styled.div`
   flex-basis: calc(100% / 3);
   padding: 20px 0;
+
   h4 {
     font-size: 23px;
     font-weight: bold;
