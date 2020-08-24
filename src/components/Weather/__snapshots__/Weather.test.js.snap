@@ -12,7 +12,7 @@ exports[`<Weather/> renders Weather correctly 1`] = `
         , 
       </h2>
       <h4>
-        Friday 21, August 2020
+        Monday 24, August 2020
       </h4>
     </div>
     <div
@@ -46,7 +46,7 @@ exports[`<Weather/> renders Weather correctly 1`] = `
           23°
         </h4>
         <span>
-          Hight
+          High
         </span>
       </div>
       <div

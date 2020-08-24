@@ -46,7 +46,7 @@ const Weather = ({ position }) => {
         </div>
       </Styled.Temperature>
       <Styled.WeatherDetailsWrapper>
-        <WeatherDetailCell value={`${Math.floor(temp_max)}°`} title="Hight" />
+        <WeatherDetailCell value={`${Math.floor(temp_max)}°`} title="High" />
         <WeatherDetailCell value={`${windSpeed}mph`} title="Wind" />
         <WeatherDetailCell value={getTimeFromUTC(sunrise)} title="Sunrise" />
         <WeatherDetailCell value={`${Math.floor(temp_min)}°`} title="Low" />

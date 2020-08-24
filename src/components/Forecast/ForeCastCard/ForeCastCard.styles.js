@@ -10,6 +10,7 @@ export const Card = styled.div`
   justify-content: center;
   padding: 30px;
   text-align: center;
+  margin-bottom: 30px;
   p {
     font-weight: bold;
   }
